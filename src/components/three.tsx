@@ -5,7 +5,7 @@ import GpGpuParticles from "./GpGPU/Gpu";
 import { OrbitControls } from "@react-three/drei";
 import { useShape } from "@/store/ShapeShifter";
 import MorphingAnimation from "./GpGPU/MorphAnimation";
-
+import { Perf } from 'r3f-perf'
 const Three = () => {
 
   const {shape}: any = useShape()
@@ -15,6 +15,7 @@ const Three = () => {
       <color attach="background" args={['#000']} />
       <GpGpuParticles morphFactor={shape} />
       {/* <OrbitControls/> */}
+      <Perf/>
       <MorphingAnimation/>
     </Canvas>
 
